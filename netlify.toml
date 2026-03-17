@@ -1,13 +1,5 @@
 [build]
-# Build inside the app folder, then publish its dist
-base = "pwaapp"
-command = "npm ci && npm run build"
-publish = "pwaapp/dist"
-
-[build.environment]
-NODE_VERSION = "18"
-# Single Page App rewrite (keeps client-side routes working)
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+  command = "npm run build"
+  publish = "dist"
+  # optionally, if your app is inside a subfolder:
+  # base = "subfolder"
